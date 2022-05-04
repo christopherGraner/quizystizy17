@@ -3,12 +3,12 @@
 {% block title %}Page 3--Now we know everything!{% endblock %}
 
 {% block content %}
-  <h1>Now I know:</h1>
+  <h1>You said:</h1>
 
 <ul>
- <li> Your first name is: {{ session['firstName'] }} </li>
- <li> Your last name is: {{ session['lastName'] }} </li>
- <li> Your favorite color is: {{ session['favoriteColor'] }} </li>
+ <li> The most efficient car (out of the three) is: {{ session['fav_car'] }} </li>
+ <li> The food described is: {{ session['fav_food'] }} </li>
+ <li> The state described is: {{ session['fav_state'] }} </li>
 </ul>
 
 

@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 2: Ask for your favorite color{% endblock %}
+{% block title %}Page 2: State {% endblock %}
 
 {% block content %}
-  <h1>Page 2: Ask for favorite color</h1>
+  <h1>Page 2: What is the state that does not form to it's surroundings?</h1>
 
- <form action={{ url_for("renderPage3") }} method="POST">
-  Favorite Color:<br>
-  <input type="text" name="favoriteColor">
+ <form action={{ url_for("renderPage3") }} method="POST"><br>
+  <input type="text" name="fav_state">
   <input type="submit" value="Submit">
- </form> 
+ </form>
 
 
 

@@ -1,18 +1,29 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 1: Name{% endblock %}
+{% block title %}Page 1: Car{% endblock %}
 
 {% block content %}
-  <h1>Page 1: What is your name?</h1>
+  <h1>Page 1: What is the most fuel efficent car?</h1>
 
  <form action={{ url_for("renderPage2") }} method="POST">
-  First name:<br>
-  <input type="text" name="firstName">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastName">
-  <input type="submit" value="Submit">
- </form> 
 
+   <input type="radio" id="por" name="fav_car" value="The GT3">
+   <label for="por">GT3</label><br>
+
+   <input type="radio" id="fer" name="fav_car" value="The 458 Italia">
+   <label for="fer">458</label><br>
+
+   <input type="radio" id="prius" name="fav_car" value="The Prius">
+   <label for="prius">Prius</label>
+
+    <h1>What is the only food cut into
+      triangles forming a circle and put
+      into a square box?</h1>
+    <label for="fav_food"></label>
+    <input type="test" id="fav_food" name="fav_food"><br>
+
+
+   <input type="submit" value="Submit">
+  </form>
 
 {% endblock %}
