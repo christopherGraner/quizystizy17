@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 3--Now we know everything!{% endblock %}
+{% block title %}Page 3: State {% endblock %}
 
 {% block content %}
-  <h1>You said:</h1>
+  <h1>Page 3: What is the state that does not form to it's surroundings?</h1>
 
-<ul>
- <li> The most efficient car (out of the three) is: {{ session['fav_car'] }} </li>
- <li> The food described is: {{ session['fav_food'] }} </li>
- <li> The state described is: {{ session['fav_state'] }} </li>
-</ul>
+ <form action={{ url_for("renderPage4") }} method="POST"><br>
+  <input type="text" name="fav_state">
+  <input type="submit" value="Submit">
+ </form>
 
 
 

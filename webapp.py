@@ -34,8 +34,29 @@ def renderPage2():
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-    session["fav_state"]=request.form['fav_state']
+    session["fav_movie"]=request.form['fav_movie']
     return render_template('page3.html')
 
+@app.route('/page4',methods=['GET','POST'])
+def renderPage4():
+    session["fav_state"]=request.form['fav_state']
+    return render_template('page4.html')
+
+if ({{ session['fav_car'] }} == prius) {
+  AC1="True"
+}
+  else{
+  AC1="False"
+}
+
+#String myStr1 = "Hello";
+#String myStr2 = "HELLO";
+#String myStr3 = "Another String";
+#System.out.println(myStr1.equalsIgnoreCase(myStr2)); // true
+#System.out.println(myStr1.equalsIgnoreCase(myStr3)); // false
+
+
+
+
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
