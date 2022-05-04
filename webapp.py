@@ -40,14 +40,15 @@ def renderPage3():
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
     session["fav_state"]=request.form['fav_state']
+    session["AC1"]=request.form['AC1']
     return render_template('page4.html')
 
-if ({{ session['fav_car'] }} == prius) {
+if ( session['fav_car'] == "The Prius"):
   AC1="True"
-}
-  else{
+
+else:
   AC1="False"
-}
+
 
 #String myStr1 = "Hello";
 #String myStr2 = "HELLO";
