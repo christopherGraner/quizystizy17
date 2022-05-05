@@ -41,33 +41,33 @@ def renderPage3():
 def renderPage4():
     session["fav_state"]=request.form['fav_state']
 
-
+    count = 0
 
     if ( session['fav_car'] == "The Prius"):
       AC1=": True"
-
+      count+=1
     else:
       AC1=": False"
 
     if ( session['fav_food'].lower() == "pizza"):
       AC2=": True"
-
+      count+=1
     else:
       AC2=": False"
 
     if ( session['fav_movie'].lower() == "the lion king"):
       AC3=": True"
-
+      count+=1
     else:
       AC3=": False"
 
     if ( session['fav_state'].lower() == "solid"):
       AC4=": True"
-
+      count+=1
     else:
       AC4=": False"
 
-    return render_template('page4.html', AC1 = AC1, AC2 = AC2, AC3 = AC3, AC4 = AC4)
+    return render_template('page4.html', AC1 = AC1, AC2 = AC2, AC3 = AC3, AC4 = AC4, count = count)
 
 
 #String myStr1 = "Hello";
