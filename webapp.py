@@ -35,6 +35,7 @@ def renderPage2():
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
     session["fav_movie"]=request.form['fav_movie']
+    #and session["fav_movie"] not in session
     return render_template('page3.html')
 
 @app.route('/page4',methods=['GET','POST'])
