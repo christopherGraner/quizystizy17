@@ -40,14 +40,34 @@ def renderPage3():
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
     session["fav_state"]=request.form['fav_state']
-    session["AC1"]=request.form['AC1']
-    return render_template('page4.html')
 
-if ( session['fav_car'] == "The Prius"):
-  AC1="True"
 
-else:
-  AC1="False"
+
+    if ( session['fav_car'] == "The Prius"):
+      AC1=": True"
+
+    else:
+      AC1=": False"
+
+    if ( session['fav_food'].lower() == "pizza"):
+      AC2=": True"
+
+    else:
+      AC2=": False"
+
+    if ( session['fav_movie'].lower() == "the lion king"):
+      AC3=": True"
+
+    else:
+      AC3=": False"
+
+    if ( session['fav_state'].lower() == "solid"):
+      AC4=": True"
+
+    else:
+      AC4=": False"
+
+    return render_template('page4.html', AC1 = AC1, AC2 = AC2, AC3 = AC3, AC4 = AC4)
 
 
 #String myStr1 = "Hello";
