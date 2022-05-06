@@ -28,19 +28,21 @@ def renderPage1():
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    session["fav_car"]=request.form['fav_car']
-    session["fav_food"]=request.form['fav_food']
+    if "fav_car" and "fav_food" not in session:
+        session["fav_car"]=request.form['fav_car']
+        session["fav_food"]=request.form['fav_food']
     return render_template('page2.html')
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-    session["fav_movie"]=request.form['fav_movie']
-    #and session["fav_movie"] not in session
+    if "fav_movie" not in session:
+        session["fav_movie"]=request.form['fav_movie']
     return render_template('page3.html')
 
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
-    session["fav_state"]=request.form['fav_state']
+    if "fav_state" not in session:
+        session["fav_state"]=request.form['fav_state']
 
     count = 0
 
